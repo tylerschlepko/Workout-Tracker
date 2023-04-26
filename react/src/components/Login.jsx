@@ -22,7 +22,16 @@ function Login() {
   };
 
   return (
-    <Box sx={{ display: 'flex', flexWrap: 'wrap' }}>
+    <Box sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems:'center', height:'100vh' }}>
+    <Box sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+        <FormControl sx={{ m: 1, width: '25ch' }} variant="outlined">
+        <InputLabel htmlFor='email-input'>Email</InputLabel>
+        <OutlinedInput
+        id='email-input'
+        type='email'
+        label="email"
+        />
+        </FormControl>
       <FormControl sx={{ m: 1, width: '25ch' }} variant="outlined">
           <InputLabel htmlFor="outlined-adornment-password">Password</InputLabel>
           <OutlinedInput
@@ -43,6 +52,7 @@ function Login() {
             label="Password"
           />
         </FormControl>
+    </Box>
     </Box>
   );
 }
